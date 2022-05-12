@@ -4,11 +4,12 @@
 #
 # @example
 #   include tuxpatch
-class tuxpatch {
+class tuxpatch (
+  Optional[Hash[Integer,String]] $tuxedo_patches = lookup('tuxedo_patches',undef,undef,undef)
+){
     if ($facts['operatingsystem'] == 'windows') {
-      $tuxedo_patches = lookup('tuxedo_patches', undef, undef, '')
-      if (!empty($tuxedo_patches) and validate_hash($tuxedo_patches)) {
-        debug ("Running on Windows OS with patches set to ${::tuxpatch::tuxedo_patches}")
+      if (!empty($tuxedo_patches)) {
+        debug ("Running on Windows OS with patches set to ${tuxedo_patches}")
         $tuxedo_patches.each | Integer $patch_index, String $patch_path | {
           if (!empty($patch_path)) {
             $pkgtemp = regsubst("${::env_temp}/${patch_index}", '(/|\\\\)', '\\', 'G')
