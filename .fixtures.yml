@@ -3,6 +3,4 @@
 ---
 fixtures:
   forge_modules:
-    stdlib: "puppetlabs/stdlib"
-    pwshlib: "puppetlabs/pwshlib"
-    powershell: "puppetlabs/powershell"
+#     stdlib: "puppetlabs/stdlib"

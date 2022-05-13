@@ -1,6 +1,6 @@
 {
   "name": "umaritimus-tuxpatch",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "umaritimus",
   "summary": "Oracle Tuxedo Patch",
   "license": "MIT",
@@ -49,7 +49,7 @@
     {
       "operatingsystem": "Debian",
       "operatingsystemrelease": [
-        "9"
+        "10"
       ]
     },
     {
@@ -69,7 +69,7 @@
   "requirements": [
     {
       "name": "puppet",
-      "version_requirement": ">= 4.10.0 < 7.0.0"
+      "version_requirement": ">= 6.21.0 < 8.0.0"
     }
   ],
   "pdk-version": "2.4.0",
