@@ -12,7 +12,7 @@ class tuxpatch (
       debug ("Running on Windows OS with patches set to ${tuxedo_patches}")
       $tuxedo_patches.each | Integer $patch_index, String $patch_path | {
         if (!empty($patch_path)) {
-          $tuxedo_path = regsubst("${lookup('tuxedo_path')}", '(/|\\\\)', '\\', 'G')
+          $tuxedo_path = regsubst("${lookup('tuxedo_location')}", '(/|\\\\)', '\\', 'G')
           $pkgtemp = regsubst("${tuxedo_path}-${patch_index}", '(/|\\\\)', '\\', 'G')
           $opatch_path = regsubst("${lookup('tuxedo_location')}/Opatch/opatch.bat", '(/|\\\\)', '\\', 'G')
           exec { "Check ${patch_path}" :

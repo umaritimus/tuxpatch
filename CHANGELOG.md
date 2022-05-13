@@ -27,3 +27,15 @@ Only works on Windows
 **Known Issues**
 
 Only works on Windows
+
+## Release 0.2.1
+
+**Features**
+
+**Bugfixes**
+
+* Fix incorrect tuxedo_path hiera lookup
+
+**Known Issues**
+
+Only works on Windows
